@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  # MySQL Database Service
+  library-database:
+    image: mysql:8.0
+    container_name: library-database
+    environment:
+      MYSQL_DATABASE: library_db
+      MYSQL_ROOT_PASSWORD: Root12345!
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    restart: unless-stopped
+
+
+  # Spring Boot Application Service
+  library-server:
+    build: .
+    container_name: library-server
+    depends_on:
+      - library-database
+    ports:
+      - "8081:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+      SPRING_DATASOURCE_URL: jdbc:mysql://library-database:3306/library_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: Root12345!
+      BOOKS_API_KEY: AIzaSyCYK7SaGMPIcUuAH2FYY7vK_aznAyRwsmE
+    restart: unless-stopped
+
+
+  keycloak-server:
+    image: quay.io/keycloak/keycloak:22.0.1
+    container_name: keycloak-server
+    ports:
+      - "7080:8080"
+    environment:
+      KEYCLOAK_ADMIN: "admin"
+      KEYCLOAK_ADMIN_PASSWORD: "admin"
+    command: "start-dev"
+
+volumes:
+  mysql-data:
