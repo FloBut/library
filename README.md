@@ -15,14 +15,12 @@ Back-end development, Software development, Web development, Java, Spring framew
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/florica-butuc/)
 
 
-<<<<<<< HEAD
 # Exercise for Technical Assessment (Backend Software Engineer)
-=======
-# Customer Relationship Management App
->>>>>>> b648db774d0d3f2357406ad739a0afbcc7da0b0a
+
 This project is a Library Management System. The API should allow
 users to manage books and authors, including the ability to add, update, delete, and
 retrieve information
+
 ## Features
 
 Add a new book: Admins can add a new book with a title, description, isbn and an author.
@@ -48,6 +46,7 @@ Retrieve details of a single author by its id: Admins can retrieve a detail of a
 The application integrates with API Documentation: Swagger.
 
 Basic Authentication & Authorization: Keycloak is integrated into the Docker setup for authentication and authorization purposes, ensuring secure access to the application.
+
 ## Built with
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
@@ -107,10 +106,7 @@ For this, I used the Specification interface, to be able to have dynamic queries
 ## Technical debt
 - add an endpoint for user registration and use Keycloack Admin Client to send requests tu keycloack server in order to save the new user
 - configure SpringDoc for Oauth2
-- follow best practice to secure credentials like api keys
-
-
-## API Reference
+  - follow best practice to secure credentials like api keys
 
 #### Create a new book
 
@@ -264,7 +260,8 @@ Ensure that you configure Keycloak properly and provide the necessary environmen
 ## Dependencies
 
 You don't need any additional dependencies.
-All dependecies related to database management, server management, security management and so on, will be automatically injected by Maven using the pom.xml file located in the root folder of the project.
+All dependencies related to database management, server management, security management and so on, will be automatically injected by Maven using the pom.xml file located in the root folder of the project.
+
 ## Installation
 
 Clone the project
@@ -322,15 +319,13 @@ This command builds and starts both the application and the database containers.
 Deploying your dockerized application can vary based on your hosting provider. Typically, you would push your Docker image to a container registry (e.g., Docker Hub, GitHub Container Registry) and then pull and run it on your production server. Here are the basic steps for pushing to Docker Hub:
 
 ### Tag your image
+
 ```http
-<<<<<<< HEAD
 docker tag library yourusername/library:latest
-=======
-docker tag CinemaApp yourusername/CinemaApp:latest
->>>>>>> b648db774d0d3f2357406ad739a0afbcc7da0b0a
 ```
 
 ### Push your image to the registry
+
 ```http
 docker push yourusername/library:latest
 ```
@@ -340,7 +335,6 @@ After pushing your image, you can follow your hosting provider instructions.
 
 ## Usage
 
-<<<<<<< HEAD
 You can use Postman to test all the endpoints
 
 First, obtain an access token by choosing Authorization - Oauth 2.0
@@ -348,9 +342,6 @@ First, obtain an access token by choosing Authorization - Oauth 2.0
 After that, fill details of you client id, client secret, acces token URL, auth URL and click "Get New Access Token".
 
 You will be redirected to the Keycloak login page, where you can type your username and password. After that, a JWT token will be generated and added as header to your Postman request.
-=======
-You can use swagger to test all the endpoints
->>>>>>> b648db774d0d3f2357406ad739a0afbcc7da0b0a
 
 ## Roadmap
 
