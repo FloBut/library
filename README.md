@@ -15,7 +15,11 @@ Back-end development, Software development, Web development, Java, Spring framew
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/florica-butuc/)
 
 
+<<<<<<< HEAD
 # Exercise for Technical Assessment (Backend Software Engineer)
+=======
+# Customer Relationship Management App
+>>>>>>> b648db774d0d3f2357406ad739a0afbcc7da0b0a
 This project is a Library Management System. The API should allow
 users to manage books and authors, including the ability to add, update, delete, and
 retrieve information
@@ -319,7 +323,11 @@ Deploying your dockerized application can vary based on your hosting provider. T
 
 ### Tag your image
 ```http
+<<<<<<< HEAD
 docker tag library yourusername/library:latest
+=======
+docker tag CinemaApp yourusername/CinemaApp:latest
+>>>>>>> b648db774d0d3f2357406ad739a0afbcc7da0b0a
 ```
 
 ### Push your image to the registry
@@ -332,6 +340,7 @@ After pushing your image, you can follow your hosting provider instructions.
 
 ## Usage
 
+<<<<<<< HEAD
 You can use Postman to test all the endpoints
 
 First, obtain an access token by choosing Authorization - Oauth 2.0
@@ -339,6 +348,9 @@ First, obtain an access token by choosing Authorization - Oauth 2.0
 After that, fill details of you client id, client secret, acces token URL, auth URL and click "Get New Access Token".
 
 You will be redirected to the Keycloak login page, where you can type your username and password. After that, a JWT token will be generated and added as header to your Postman request.
+=======
+You can use swagger to test all the endpoints
+>>>>>>> b648db774d0d3f2357406ad739a0afbcc7da0b0a
 
 ## Roadmap
 
